@@ -1,0 +1,43 @@
+include ':app'
+
+include ':UnitySmallPackageDemo'
+project(':UnitySmallPackageDemo').projectDir = new File('../GPlayUnity/sample/EditorTestASProj')
+
+include ':libUnityPlayer'
+project(':libUnityPlayer').projectDir = new File('../GPlayUnity/framework/UnityRuntime')
+
+include ":engines:GplayEngineBridge"
+project(':engines:GplayEngineBridge').projectDir = new File('../GPlayUnity/framework/GplayEngineBridge')
+
+
+include ':UnitySimpleDemo'
+project(':UnitySimpleDemo').projectDir = new File('../GPlayUnity/sample/UnitySimpleDemo')
+
+include ":GplayUnityEmulator"
+project(":GplayUnityEmulator").projectDir = new File('../GplaySDK/samples/GplayUnityEmulator')
+
+//include ":GplayEmulator"
+//project(':GplayEmulator').projectDir = new File('../GplaySDK/samples/GplayEmulator')
+
+// GplayEmulator/build.gradle 依赖项
+include ":GplaySkyDragonSDK"
+project(':GplaySkyDragonSDK').projectDir = new File('../SkyDragonSDK/GplaySkyDragonSDK')
+
+include ":frameworks:GplaySDK"
+project(':frameworks:GplaySDK').projectDir = new File('../GplaySDK/frameworks/GplaySDK')
+
+include ":library:GplaySuspensionPoint"
+project(':library:GplaySuspensionPoint').projectDir = new File('../GplaySDK/library/GplaySuspensionPoint')
+
+
+// GplaySDK/build.gradle 依赖项
+include ":frameworks:GplayRuntimeBridge"
+project(':frameworks:GplayRuntimeBridge').projectDir = new File('../GplaySDK/frameworks/GplayRuntimeBridge')
+
+include ":frameworks:GplayUnitSDKPlugin"
+project(':frameworks:GplayUnitSDKPlugin').projectDir = new File('../GplaySDK/frameworks/GplayUnitSDKPlugin')
+
+
+
+include ":libUnityPlayer5.1.3p3"
+project(':libUnityPlayer5.1.3p3').projectDir = new File('../UnityClassJar/UnityPlayer5.1.3p3')
